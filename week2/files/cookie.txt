@@ -1,0 +1,4 @@
+{'role': 'User', 'username': 't'}
+
+
+secret_key = '$hallICompareTHEE2aSummersday'

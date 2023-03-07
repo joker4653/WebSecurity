@@ -8,8 +8,8 @@ app = Flask(__name__, static_folder = 'static', static_url_path = '')
 app.secret_key = "hello!"
 
 
-googleID = '182273388223-6qvbscmrd53sj8oiu26c9qh7n8hjn867.apps.googleusercontent.com'
-googleSec = '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'
+googleID = 'HIDDEN'
+googleSec = 'HIDDEN'
 REDIRECT_URI  = 'http://127.0.0.1:5000/auth'
 
 

@@ -39,7 +39,7 @@ def crawl(links):
             "Content-Type": "application/x-www-form-urlencoded"
             })
 
-            if ("COMP" in r2.text):
+            if ("COMP6443" in r2.text):
                 print(r2.text)
 
             s = BeautifulSoup(r2.content, 'html.parser')

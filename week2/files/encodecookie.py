@@ -2,7 +2,8 @@ import pickle
 import base64
 
 # Example data to be encoded
-data = {'role': 'Staff', 'username': 'test'}
+data = {"exp": 1678778991,
+  "balance": 5}
 
 # Serialize the data using pickle
 serialized_data = pickle.dumps(data)

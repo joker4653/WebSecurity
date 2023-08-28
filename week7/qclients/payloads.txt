@@ -1,0 +1,2 @@
+APPEND TO INTERCEPTED REQUEST: Content-Security-Policy: script-src 'sha256-bhHHL3z2vDgxUt0W3dWQOrprscmda2Y5pLsLg4GF+pI='
+PAYLOAD: <script>alert(1)</script>

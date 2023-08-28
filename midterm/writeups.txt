@@ -1,0 +1,32 @@
+Q1
+Went to q1.midterm.quoccabank.com/
+Found robots.txt
+found dev website, 
+fake login attempt, in response page source code, comment on default credentials, what are default credentials?
+
+Q2
+Went to q2.midterm.quoccabank.com/
+Created account,must be role of senate
+Cookie is not encoded and only records the username
+must relate to cookie 
+
+Q3
+Went to q3.midterm.quoccabank.com/
+Website claims to use jwt, pulls jwt from cookies using dev tools
+modify cookie on jwt to change balance of coins, solution fails
+
+Q4
+Went to q4.midterm.quoccabank.com/
+Use escape characters on search bar, use of " shows form is sql injectable
+Try standard escapes: " or 1=1; -- test, fails no use of -- or ; allowed
+try modified escapes: " OR '1' = '1'
+modified escape succeeds
+COMP6443MIDTERM{WAFs_R_InS3cURe}
+
+
+Q5
+Went to q5.midterm.quoccabank.com/
+Use escape characters on search bar, use of " shows form is sql injectable
+standard escapes dont work, Keywords appear to get filtered out of form
+noted that LIKE does not get filtered out and may be of use
+" LIKE "COMP"; yields results but not flag
